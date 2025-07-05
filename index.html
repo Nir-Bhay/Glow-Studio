@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +22,7 @@
             --text-light: #666666;
             --luxury: #D4AF37;
             --white: #FFFFFF;
-            --gradient: linear-gradient(135deg, rgba(255,182,193,0.3), rgba(212,175,55,0.3));
+            --gradient: linear-gradient(135deg, rgba(255, 182, 193, 0.3), rgba(212, 175, 55, 0.3));
         }
 
         body {
@@ -60,8 +61,15 @@
         }
 
         @keyframes lipstickDraw {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(10deg); }
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
         }
 
         /* Cursor Effects */
@@ -77,815 +85,878 @@
         }
 
         @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 1; transform: scale(1); }
+
+            0%,
+            100% {
+                opacity: 0;
+                transform: scale(0);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1);
+            }
         }
 
         /* Navigation */
-       
-       
-       /* Responsive Navbar CSS *//* Fixed Responsive Navbar CSS */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
 
-.navbar.scrolled {
-    padding: 10px 0;
-    background: rgba(255, 255, 255, 0.98);
-}
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
+        /* Responsive Navbar CSS */
+        /* Fixed Responsive Navbar CSS */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
 
-.logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    background: linear-gradient(45deg, var(--primary), var(--luxury));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-}
+        .navbar.scrolled {
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.98);
+        }
 
-/* Desktop Navigation - FIXED */
-.nav-menu {
-    display: flex;
-    list-style: none;
-    gap: 40px;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-}
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
 
-.nav-menu li {
-    list-style: none;
-}
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--luxury));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
 
-.nav-menu a {
-    text-decoration: none;
-    color: var(--text-dark);
-    font-weight: 500;
-    transition: all 0.3s ease;
-    position: relative;
-    font-size: 1rem;
-}
+        /* Desktop Navigation - FIXED */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
 
-.nav-menu a:hover {
-    color: var(--luxury);
-}
+        .nav-menu li {
+            list-style: none;
+        }
 
-.nav-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--luxury);
-    transition: width 0.3s ease;
-}
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            font-size: 1rem;
+        }
 
-.nav-menu a:hover::after {
-    width: 100%;
-}
+        .nav-menu a:hover {
+            color: var(--luxury);
+        }
 
-/* Book Now Button */
-.book-now-nav {
-    background: var(--luxury);
-    color: var(--white) !important;
-    padding: 12px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-}
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--luxury);
+            transition: width 0.3s ease;
+        }
 
-.book-now-nav::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(255,255,255,0.3);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-}
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
 
-.book-now-nav:hover::before {
-    width: 300px;
-    height: 300px;
-}
+        /* Book Now Button */
+        .book-now-nav {
+            background: var(--luxury);
+            color: var(--white) !important;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
 
-.book-now-nav:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(212,175,55,0.4);
-}
+        .book-now-nav::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
 
-/* Mobile Menu Toggle Button */
-.mobile-menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    z-index: 1001;
-    background: none;
-    border: none;
-    padding: 5px;
-}
+        .book-now-nav:hover::before {
+            width: 300px;
+            height: 300px;
+        }
 
-.mobile-menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: var(--text-dark);
-    margin: 3px 0;
-    transition: all 0.3s ease;
-    display: block;
-}
+        .book-now-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
 
-/* Hamburger Animation */
-.mobile-menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
+        /* Mobile Menu Toggle Button */
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 1001;
+            background: none;
+            border: none;
+            padding: 5px;
+        }
 
-.mobile-menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-    transform: translateX(-20px);
-}
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: all 0.3s ease;
+            display: block;
+        }
 
-.mobile-menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
+        /* Hamburger Animation */
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
 
-/* Mobile Menu Styles */
-.mobile-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 400px;
-    height: 100vh;
-    background: var(--white);
-    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
-    transition: right 0.3s ease;
-    z-index: 999;
-    overflow-y: auto;
-}
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
 
-.mobile-menu.active {
-    right: 0;
-}
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
 
-.mobile-menu-header {
-    padding: 20px;
-    border-bottom: 1px solid #E0E0E0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100vh;
+            background: var(--white);
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 999;
+            overflow-y: auto;
+        }
 
-.mobile-menu-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    background: linear-gradient(45deg, var(--primary), var(--luxury));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-}
+        .mobile-menu.active {
+            right: 0;
+        }
 
-.mobile-nav-menu {
-    list-style: none;
-    padding: 20px;
-    margin: 0;
-}
+        .mobile-menu-header {
+            padding: 20px;
+            border-bottom: 1px solid #E0E0E0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.mobile-nav-menu li {
-    margin-bottom: 20px;
-    opacity: 0;
-    transform: translateX(50px);
-    animation: slideIn 0.5s ease forwards;
-}
+        .mobile-menu-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            background: linear-gradient(45deg, var(--primary), var(--luxury));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
 
-.mobile-nav-menu li:nth-child(1) { animation-delay: 0.1s; }
-.mobile-nav-menu li:nth-child(2) { animation-delay: 0.2s; }
-.mobile-nav-menu li:nth-child(3) { animation-delay: 0.3s; }
-.mobile-nav-menu li:nth-child(4) { animation-delay: 0.4s; }
-.mobile-nav-menu li:nth-child(5) { animation-delay: 0.5s; }
-.mobile-nav-menu li:nth-child(6) { animation-delay: 0.6s; }
-.mobile-nav-menu li:nth-child(7) { animation-delay: 0.7s; }
+        .mobile-nav-menu {
+            list-style: none;
+            padding: 20px;
+            margin: 0;
+        }
 
-@keyframes slideIn {
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+        .mobile-nav-menu li {
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateX(50px);
+            animation: slideIn 0.5s ease forwards;
+        }
 
-.mobile-nav-menu a {
-    color: var(--text-dark);
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: 500;
-    display: block;
-    padding: 10px 0;
-    position: relative;
-    transition: all 0.3s ease;
-}
+        .mobile-nav-menu li:nth-child(1) {
+            animation-delay: 0.1s;
+        }
 
-.mobile-nav-menu a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--luxury);
-    transition: width 0.3s ease;
-}
+        .mobile-nav-menu li:nth-child(2) {
+            animation-delay: 0.2s;
+        }
 
-.mobile-nav-menu a:hover::after,
-.mobile-nav-menu a:focus::after {
-    width: 100%;
-}
+        .mobile-nav-menu li:nth-child(3) {
+            animation-delay: 0.3s;
+        }
 
-.mobile-book-now {
-    margin: 20px;
-    display: block;
-    background: var(--luxury);
-    color: var(--white) !important;
-    padding: 15px;
-    text-align: center;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
+        .mobile-nav-menu li:nth-child(4) {
+            animation-delay: 0.4s;
+        }
 
-.mobile-book-now:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
-}
+        .mobile-nav-menu li:nth-child(5) {
+            animation-delay: 0.5s;
+        }
 
-/* Mobile Menu Overlay */
-.mobile-menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 998;
-}
+        .mobile-nav-menu li:nth-child(6) {
+            animation-delay: 0.6s;
+        }
 
-.mobile-menu-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
+        .mobile-nav-menu li:nth-child(7) {
+            animation-delay: 0.7s;
+        }
 
-/* Responsive Breakpoints */
-@media (max-width: 1024px) {
-    .nav-menu {
-        gap: 25px;
-    }
-    
-    .nav-container {
-        padding: 15px 20px;
-    }
-    
-    .nav-menu a {
-        font-size: 0.95rem;
-    }
-}
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-@media (max-width: 768px) {
-    /* Hide desktop menu */
-    .nav-menu {
-        display: none !important;
-    }
-    
-    .book-now-nav {
-        display: none !important;
-    }
-    
-    /* Show mobile menu toggle */
-    .mobile-menu-toggle {
-        display: flex;
-    }
-    
-    /* Adjust logo size */
-    .logo {
-        font-size: 2rem;
-    }
-    
-    /* Sticky navbar with smaller padding on mobile */
-    .navbar.scrolled {
-        padding: 5px 0;
-    }
-    
-    .nav-container {
-        padding: 15px;
-    }
-}
+        .mobile-nav-menu a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: block;
+            padding: 10px 0;
+            position: relative;
+            transition: all 0.3s ease;
+        }
 
-@media (max-width: 480px) {
-    .mobile-menu {
-        width: 90%;
-    }
-    
-    .mobile-nav-menu a {
-        font-size: 1.1rem;
-    }
-}
+        .mobile-nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--luxury);
+            transition: width 0.3s ease;
+        }
 
-/* iPad Pro and larger tablets */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .nav-menu {
-        gap: 20px;
-    }
-    
-    .nav-menu a {
-        font-size: 0.95rem;
-    }
-    
-    .book-now-nav {
-        padding: 10px 25px;
-        font-size: 0.95rem;
-    }
-}
-       
+        .mobile-nav-menu a:hover::after,
+        .mobile-nav-menu a:focus::after {
+            width: 100%;
+        }
+
+        .mobile-book-now {
+            margin: 20px;
+            display: block;
+            background: var(--luxury);
+            color: var(--white) !important;
+            padding: 15px;
+            text-align: center;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-book-now:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 998;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .nav-menu {
+                gap: 25px;
+            }
+
+            .nav-container {
+                padding: 15px 20px;
+            }
+
+            .nav-menu a {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            /* Hide desktop menu */
+            .nav-menu {
+                display: none !important;
+            }
+
+            .book-now-nav {
+                display: none !important;
+            }
+
+            /* Show mobile menu toggle */
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            /* Adjust logo size */
+            .logo {
+                font-size: 2rem;
+            }
+
+            /* Sticky navbar with smaller padding on mobile */
+            .navbar.scrolled {
+                padding: 5px 0;
+            }
+
+            .nav-container {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mobile-menu {
+                width: 90%;
+            }
+
+            .mobile-nav-menu a {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* iPad Pro and larger tablets */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .nav-menu {
+                gap: 20px;
+            }
+
+            .nav-menu a {
+                font-size: 0.95rem;
+            }
+
+            .book-now-nav {
+                padding: 10px 25px;
+                font-size: 0.95rem;
+            }
+        }
+
         /* Enhanced Hero Section CSS */
-.hero {
-    height: 100vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: linear-gradient(135deg, #FFB6C1 0%, #FFD700 50%, #E6E6FA 100%);
-}
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, #FFB6C1 0%, #FFD700 50%, #E6E6FA 100%);
+        }
 
-/* Animated gradient background */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        45deg,
-        rgba(255, 182, 193, 0.4) 0%,
-        rgba(212, 175, 55, 0.3) 25%,
-        rgba(230, 230, 250, 0.4) 50%,
-        rgba(255, 215, 0, 0.3) 75%,
-        rgba(255, 182, 193, 0.4) 100%
-    );
-    animation: gradientShift 15s ease infinite;
-    z-index: -3;
-}
+        /* Animated gradient background */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                    rgba(255, 182, 193, 0.4) 0%,
+                    rgba(212, 175, 55, 0.3) 25%,
+                    rgba(230, 230, 250, 0.4) 50%,
+                    rgba(255, 215, 0, 0.3) 75%,
+                    rgba(255, 182, 193, 0.4) 100%);
+            animation: gradientShift 15s ease infinite;
+            z-index: -3;
+        }
 
-@keyframes gradientShift {
-    0%, 100% { transform: rotate(0deg) scale(1.5); }
-    25% { transform: rotate(90deg) scale(1.8); }
-    50% { transform: rotate(180deg) scale(1.5); }
-    75% { transform: rotate(270deg) scale(1.8); }
-}
+        @keyframes gradientShift {
 
-/* Glitter effect overlay */
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 60%, rgba(255, 215, 0, 0.2) 0%, transparent 50%),
-        radial-gradient(circle at 40% 80%, rgba(255, 182, 193, 0.3) 0%, transparent 50%);
-    animation: glitterMove 20s linear infinite;
-    z-index: -2;
-}
+            0%,
+            100% {
+                transform: rotate(0deg) scale(1.5);
+            }
 
-@keyframes glitterMove {
-    0% { transform: translateX(0) translateY(0); }
-    100% { transform: translateX(-100px) translateY(-100px); }
-}
+            25% {
+                transform: rotate(90deg) scale(1.8);
+            }
 
-.hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -4;
-    opacity: 0.6;
-    filter: brightness(0.8) contrast(1.1);
-}
+            50% {
+                transform: rotate(180deg) scale(1.5);
+            }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(ellipse at center, transparent 0%, rgba(45, 45, 45, 0.4) 100%),
-        linear-gradient(180deg, 
-            rgba(255, 182, 193, 0.3) 0%, 
-            rgba(212, 175, 55, 0.2) 50%, 
-            rgba(230, 230, 250, 0.3) 100%);
-    z-index: -1;
-    backdrop-filter: blur(2px);
-}
+            75% {
+                transform: rotate(270deg) scale(1.8);
+            }
+        }
 
-/* Animated beauty elements */
-.beauty-elements {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-}
+        /* Glitter effect overlay */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 20% 40%, rgba(255, 255, 255, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 60%, rgba(255, 215, 0, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 182, 193, 0.3) 0%, transparent 50%);
+            animation: glitterMove 20s linear infinite;
+            z-index: -2;
+        }
 
-.beauty-element {
-    position: absolute;
-    opacity: 0.6;
-    animation: floatElement 20s infinite linear;
-}
+        @keyframes glitterMove {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
 
-.beauty-element.lipstick {
-    width: 40px;
-    height: 100px;
-    background: linear-gradient(180deg, #FF69B4 0%, #FFB6C1 70%, #D4AF37 100%);
-    border-radius: 20px 20px 5px 5px;
-    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
-}
+            100% {
+                transform: translateX(-100px) translateY(-100px);
+            }
+        }
 
-.beauty-element.brush {
-    width: 30px;
-    height: 120px;
-    background: linear-gradient(180deg, #FFB6C1 0%, #2D2D2D 50%);
-    border-radius: 50% 50% 5px 5px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            backdrop-filter: blur(2px);
+        
+            opacity: 0.6;
+            filter: brightness(0.8) contrast(1.1);
+        }
 
-.beauty-element.mirror {
-    width: 80px;
-    height: 80px;
-    background: radial-gradient(circle, #FFD700 0%, #D4AF37 100%);
-    border-radius: 50%;
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 10px 30px rgba(212, 175, 55, 0.3);
-}
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(ellipse at center, transparent 0%, rgba(45, 45, 45, 0.4) 100%),
+                linear-gradient(180deg,
+                    rgba(255, 182, 193, 0.3) 0%,
+                    rgba(212, 175, 55, 0.2) 50%,
+                    rgba(230, 230, 250, 0.3) 100%);
+            z-index: -1;
+            backdrop-filter: blur(2px);
+        }
 
-@keyframes floatElement {
-    from {
-        transform: translateY(100vh) rotate(0deg);
-        opacity: 0;
-    }
-    10% {
-        opacity: 0.6;
-    }
-    90% {
-        opacity: 0.6;
-    }
-    to {
-        transform: translateY(-150px) rotate(360deg);
-        opacity: 0;
-    }
-}
+        /* Animated beauty elements */
+        .beauty-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
 
-/* Enhanced hero content */
-.hero-content {
-    text-align: center;
-    z-index: 1;
-    animation: heroEntry 1.5s ease-out;
-    position: relative;
-}
+        .beauty-element {
+            position: absolute;
+            opacity: 0.6;
+            animation: floatElement 20s infinite linear;
+        }
 
-@keyframes heroEntry {
-    0% {
-        opacity: 0;
-        transform: translateY(50px) scale(0.9);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
+        .beauty-element.lipstick {
+            width: 40px;
+            height: 100px;
+            background: linear-gradient(180deg, #FF69B4 0%, #FFB6C1 70%, #D4AF37 100%);
+            border-radius: 20px 20px 5px 5px;
+            box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+        }
 
-.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(3rem, 8vw, 5rem);
-    color: var(--white);
-    margin-bottom: 20px;
-    text-shadow: 
-        2px 2px 4px rgba(0,0,0,0.3),
-        0 0 30px rgba(255, 182, 193, 0.5),
-        0 0 60px rgba(212, 175, 55, 0.3);
-    letter-spacing: 2px;
-    position: relative;
-    display: inline-block;
-}
+        .beauty-element.brush {
+            width: 30px;
+            height: 120px;
+            background: linear-gradient(180deg, #FFB6C1 0%, #2D2D2D 50%);
+            border-radius: 50% 50% 5px 5px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
 
-/* Animated text shine effect */
-.hero h1::before {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.4) 50%,
-        transparent 100%
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: textShine 3s infinite;
-}
+        .beauty-element.mirror {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #FFD700 0%, #D4AF37 100%);
+            border-radius: 50%;
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
 
-@keyframes textShine {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-}
+        @keyframes floatElement {
+            from {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
 
-.hero p {
-    font-size: clamp(1.2rem, 3vw, 1.8rem);
-    color: var(--white);
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-    opacity: 0;
-    animation: fadeInUp 1s ease-out 0.5s forwards;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
+            10% {
+                opacity: 0.6;
+            }
 
-/* Enhanced buttons */
-.hero-buttons {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    opacity: 0;
-    animation: fadeInUp 1s ease-out 0.8s forwards;
-}
+            90% {
+                opacity: 0.6;
+            }
 
-.btn-primary {
-    background: linear-gradient(135deg, var(--luxury) 0%, #FFD700 100%);
-    color: var(--white);
-    padding: 18px 45px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-}
+            to {
+                transform: translateY(-150px) rotate(360deg);
+                opacity: 0;
+            }
+        }
 
-.btn-primary::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    transition: left 0.6s ease;
-}
+        /* Enhanced hero content */
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+            animation: heroEntry 1.5s ease-out;
+            position: relative;
+        }
 
-.btn-primary:hover::before {
-    left: 100%;
-}
+        @keyframes heroEntry {
+            0% {
+                opacity: 0;
+                transform: translateY(50px) scale(0.9);
+            }
 
-.btn-primary:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
-}
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
 
-.btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    color: var(--white);
-    padding: 18px 45px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    overflow: hidden;
-}
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 8vw, 5rem);
+            color: var(--white);
+            margin-bottom: 20px;
+            text-shadow:
+                2px 2px 4px rgba(0, 0, 0, 0.3),
+                0 0 30px rgba(255, 182, 193, 0.5),
+                0 0 60px rgba(212, 175, 55, 0.3);
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
 
-.btn-secondary::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-}
+        /* Animated text shine effect */
+        .hero h1::before {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0.4) 50%,
+                    transparent 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textShine 3s infinite;
+        }
 
-.btn-secondary:hover::after {
-    width: 300px;
-    height: 300px;
-}
+        @keyframes textShine {
+            0% {
+                transform: translateX(-100%);
+            }
 
-.btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: var(--white);
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
-}
+            100% {
+                transform: translateX(100%);
+            }
+        }
 
-/* Enhanced floating rose petals */
-.petal {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    opacity: 0.8;
-    filter: drop-shadow(0 5px 10px rgba(255, 182, 193, 0.3));
-    z-index: 0;
-}
+        .hero p {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--white);
+            margin-bottom: 40px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.5s forwards;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
 
-.petal::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(ellipse at top, #FFB6C1 0%, #FF69B4 100%);
-    border-radius: 0 100% 0 100%;
-    transform: rotate(45deg);
-}
+        /* Enhanced buttons */
+        .hero-buttons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.8s forwards;
+        }
 
-.petal::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(ellipse at top, #FFD4E1 0%, #FFB6C1 100%);
-    border-radius: 0 100% 0 100%;
-    transform: rotate(-45deg);
-}
+        .btn-primary {
+            background: linear-gradient(135deg, var(--luxury) 0%, #FFD700 100%);
+            color: var(--white);
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
 
-@keyframes float {
-    0% {
-        transform: translateY(100vh) rotate(0deg) scale(0);
-        opacity: 0;
-    }
-    10% {
-        opacity: 0.8;
-        transform: translateY(90vh) rotate(36deg) scale(1);
-    }
-    90% {
-        opacity: 0.8;
-        transform: translateY(10vh) rotate(324deg) scale(1);
-    }
-    100% {
-        transform: translateY(-100px) rotate(360deg) scale(0);
-        opacity: 0;
-    }
-}
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.6s ease;
+        }
 
-/* Sparkle particles */
-.sparkle-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-}
+        .btn-primary:hover::before {
+            left: 100%;
+        }
 
-.sparkle {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: #FFD700;
-    border-radius: 50%;
-    animation: sparkleAnimation 3s linear infinite;
-}
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
 
-@keyframes sparkleAnimation {
-    0% {
-        transform: scale(0) rotate(0deg);
-        opacity: 0;
-    }
-    50% {
-        transform: scale(1) rotate(180deg);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(0) rotate(360deg);
-        opacity: 0;
-    }
-}
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            color: var(--white);
+            padding: 18px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
 
-/* Animated decorative frame */
-.hero-frame {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    right: 50px;
-    bottom: 50px;
-    border: 2px solid rgba(212, 175, 55, 0.3);
-    border-radius: 20px;
-    pointer-events: none;
-    z-index: 0;
-}
+        .btn-secondary::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
 
-.hero-frame::before,
-.hero-frame::after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    border: 2px solid rgba(212, 175, 55, 0.5);
-}
+        .btn-secondary:hover::after {
+            width: 300px;
+            height: 300px;
+        }
 
-.hero-frame::before {
-    top: -10px;
-    left: -10px;
-    border-right: none;
-    border-bottom: none;
-    border-radius: 20px 0 0 0;
-}
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--white);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
+        }
 
-.hero-frame::after {
-    bottom: -10px;
-    right: -10px;
-    border-left: none;
-    border-top: none;
-    border-radius: 0 0 20px 0;
-}
+        /* Enhanced floating rose petals */
+        .petal {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            opacity: 0.8;
+            filter: drop-shadow(0 5px 10px rgba(255, 182, 193, 0.3));
+            z-index: 0;
+        }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1.1rem;
-        padding: 0 20px;
-    }
-    
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-        padding: 0 40px;
-    }
-    
-    .btn-primary,
-    .btn-secondary {
-        width: 100%;
-        text-align: center;
-    }
-    
-    .hero-frame {
-        display: none;
-    }
-}
+        .petal::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at top, #FFB6C1 0%, #FF69B4 100%);
+            border-radius: 0 100% 0 100%;
+            transform: rotate(45deg);
+        }
 
-/* Additional animation on scroll */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+        .petal::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at top, #FFD4E1 0%, #FFB6C1 100%);
+            border-radius: 0 100% 0 100%;
+            transform: rotate(-45deg);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg) scale(0);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.8;
+                transform: translateY(90vh) rotate(36deg) scale(1);
+            }
+
+            90% {
+                opacity: 0.8;
+                transform: translateY(10vh) rotate(324deg) scale(1);
+            }
+
+            100% {
+                transform: translateY(-100px) rotate(360deg) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Sparkle particles */
+        .sparkle-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #FFD700;
+            border-radius: 50%;
+            animation: sparkleAnimation 3s linear infinite;
+        }
+
+        @keyframes sparkleAnimation {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            50% {
+                transform: scale(1) rotate(180deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(0) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Animated decorative frame */
+        .hero-frame {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            right: 50px;
+            bottom: 50px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+            border-radius: 20px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-frame::before,
+        .hero-frame::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 2px solid rgba(212, 175, 55, 0.5);
+        }
+
+        .hero-frame::before {
+            top: -10px;
+            left: -10px;
+            border-right: none;
+            border-bottom: none;
+            border-radius: 20px 0 0 0;
+        }
+
+        .hero-frame::after {
+            bottom: -10px;
+            right: -10px;
+            border-left: none;
+            border-top: none;
+            border-radius: 0 0 20px 0;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+                padding: 0 20px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                padding: 0 40px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-frame {
+                display: none;
+            }
+        }
+
+        /* Additional animation on scroll */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Welcome Section */
         .welcome {
             padding: 100px 20px;
@@ -925,7 +996,7 @@
             padding: 20px;
             background: var(--white);
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
@@ -954,7 +1025,7 @@
             height: 500px;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
 
         .slide {
@@ -1028,14 +1099,14 @@
             background: var(--white);
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             position: relative;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
         .service-image {
@@ -1132,7 +1203,7 @@
             position: relative;
             overflow: hidden;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .package-card:hover {
@@ -1363,7 +1434,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
             opacity: 0;
             transition: opacity 0.3s ease;
             display: flex;
@@ -1474,7 +1545,7 @@
             transform: translate(-50%, -50%);
             width: 60px;
             height: 60px;
-            background: rgba(255,255,255,0.9);
+            background: rgba(255, 255, 255, 0.9);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1521,7 +1592,7 @@
             background: var(--white);
             border-radius: 20px;
             padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
         }
 
         .booking-steps {
@@ -1672,7 +1743,7 @@
 
         .submit-booking:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(212,175,55,0.4);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
         }
 
         /* Blog Section */
@@ -1693,7 +1764,7 @@
             background: var(--white);
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
 
@@ -1780,7 +1851,7 @@
         .footer-section p,
         .footer-section ul {
             line-height: 1.8;
-            color: rgba(255,255,255,0.8);
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .footer-section ul {
@@ -1792,7 +1863,7 @@
         }
 
         .footer-section a {
-            color: rgba(255,255,255,0.8);
+            color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             transition: color 0.3s ease;
         }
@@ -1810,7 +1881,7 @@
         .social-links a {
             width: 40px;
             height: 40px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1826,8 +1897,8 @@
         .footer-bottom {
             text-align: center;
             padding-top: 40px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.6);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
         }
 
         /*
@@ -1846,16 +1917,24 @@
             color: var(--white);
             font-size: 1.8rem;
             cursor: pointer;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             z-index: 999;
             transition: all 0.3s ease;
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
         }
 
         .floating-whatsapp:hover {
@@ -1873,7 +1952,7 @@
             padding: 40px;
             max-width: 500px;
             width: 90%;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             z-index: 10001;
             transition: all 0.3s ease;
             text-align: center;
@@ -1889,7 +1968,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             z-index: 10000;
             opacity: 0;
             visibility: hidden;
@@ -1964,7 +2043,7 @@
             max-width: 400px;
             height: 100vh;
             background: var(--white);
-            box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
             transition: right 0.3s ease;
             z-index: 999;
             padding: 80px 30px 30px;
@@ -2050,8 +2129,13 @@
 
         /* Loading Animation */
         @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
         }
 
         .shimmer {
@@ -2090,26 +2174,53 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Preloader -->
     <div class="preloader">
         <div class="lipstick-loader">
             <svg width="60" height="150" viewBox="0 0 60 150">
-                <rect x="20" y="50" width="20" height="80" fill="#FFB6C1" rx="10"/>
-                <path d="M20 50 Q30 20 40 50" fill="#FF69B4"/>
-                <rect x="15" y="130" width="30" height="20" fill="#D4AF37" rx="5"/>
+                <rect x="20" y="50" width="20" height="80" fill="#FFB6C1" rx="10" />
+                <path d="M20 50 Q30 20 40 50" fill="#FF69B4" />
+                <rect x="15" y="130" width="30" height="20" fill="#D4AF37" rx="5" />
             </svg>
         </div>
     </div>
 
     <!-- Navigation -->
-   <!-- Updated Navbar HTML Structure -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">Glow Studio</div>
-        
-        <!-- Desktop Menu -->
-        <ul class="nav-menu">
+    <!-- Updated Navbar HTML Structure -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Glow Studio</div>
+
+            <!-- Desktop Menu -->
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#experts">Experts</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+
+            <a href="#booking" class="book-now-nav">Book Now</a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-logo">Glow Studio</div>
+        </div>
+        <ul class="mobile-nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#packages">Packages</a></li>
@@ -2118,42 +2229,16 @@
             <li><a href="#testimonials">Reviews</a></li>
             <li><a href="#blog">Blog</a></li>
         </ul>
-        
-        <a href="#booking" class="book-now-nav">Book Now</a>
-        
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <a href="#booking" class="mobile-book-now">Book Now</a>
     </div>
-</nav>
 
-<!-- Mobile Menu -->
-<div class="mobile-menu">
-    <div class="mobile-menu-header">
-        <div class="mobile-menu-logo">Glow Studio</div>
-    </div>
-    <ul class="mobile-nav-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#packages">Packages</a></li>
-        <li><a href="#experts">Experts</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#testimonials">Reviews</a></li>
-        <li><a href="#blog">Blog</a></li>
-    </ul>
-    <a href="#booking" class="mobile-book-now">Book Now</a>
-</div>
-
-<!-- Mobile Menu Overlay -->
-<div class="mobile-menu-overlay"></div>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
         <video class="hero-video" autoplay muted loop>
-            <source src="beauty-video.mp4" type="video/mp4">
+            <source src="Image/beauty-video.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -2176,8 +2261,11 @@
         <div class="welcome-container">
             <div class="welcome-content">
                 <h2>Welcome to Your Beauty Sanctuary</h2>
-                <p>Step into Glow Studio, where every treatment is a journey to discovering your most radiant self. Our expert team combines cutting-edge techniques with luxurious products to deliver results that exceed expectations.</p>
-                <p>With over 10 years of excellence in beauty care, we've transformed thousands of lives through our personalized approach to beauty and wellness.</p>
+                <p>Step into Glow Studio, where every treatment is a journey to discovering your most radiant self. Our
+                    expert team combines cutting-edge techniques with luxurious products to deliver results that exceed
+                    expectations.</p>
+                <p>With over 10 years of excellence in beauty care, we've transformed thousands of lives through our
+                    personalized approach to beauty and wellness.</p>
                 <div class="trust-badges">
                     <div class="badge">
                         <i class="fas fa-users"></i>
@@ -2198,13 +2286,15 @@
             </div>
             <div class="welcome-slideshow">
                 <div class="slide active">
-                    <img src="https://via.placeholder.com/600x500/FFB6C1/FFFFFF?text=Salon+Interior" alt="Salon Interior">
+                    <img src="Image/88afabab-2392-4f00-ab24-7ee628b29070.jpg"
+                        alt="Salon Interior">
                 </div>
                 <div class="slide">
-                    <img src="https://via.placeholder.com/600x500/E6E6FA/FFFFFF?text=Treatment+Room" alt="Treatment Room">
+                    <img src="Image/2011 NAHA Finalists - Salon Design copy.jpg"
+                        alt="Treatment Room">
                 </div>
                 <div class="slide">
-                    <img src="https://via.placeholder.com/600x500/FFD700/FFFFFF?text=Reception+Area" alt="Reception">
+                    <img src="Image/Liana (liana95080249) - Profile _ Pinterest.jpg" alt="Reception">
                 </div>
             </div>
         </div>
@@ -2277,7 +2367,7 @@
             </div>
         </div>
     </section>
-     <!-- Our Experts -->
+    <!-- Our Experts -->
     <section id="experts" class="experts">
         <div class="section-header">
             <h2>Meet Our Experts</h2>
@@ -2286,7 +2376,7 @@
         <div class="experts-grid">
             <div class="expert-card">
                 <div class="expert-image">
-                    <img src="https://via.placeholder.com/200x200/FFB6C1/FFFFFF?text=Expert+1" alt="Expert">
+                    <img src="Image/How To Do Scalp Massage For Hair Growth And How Does It Work_.jpg" alt="Expert">
                 </div>
                 <h3 class="expert-name">Priya Sharma</h3>
                 <p class="expert-specialization">Hair Specialist</p>
@@ -2314,70 +2404,77 @@
             <button class="filter-btn">Nail Art</button>
             <button class="filter-btn">Skin</button>
         </div>
-                <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300/FFB6C1/FFFFFF?text=Hair+Transformation" alt="Hair Transformation">
-                <div class="gallery-overlay">
-                    <div class="gallery-info">
-                        <h4>Stunning Hair Color</h4>
-                        <p>Balayage Transformation</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300/E6E6FA/FFFFFF?text=Bridal+Look" alt="Bridal Look">
-                <div class="gallery-overlay">
-                    <div class="gallery-info">
-                        <h4>Bridal Elegance</h4>
-                        <p>HD Makeup & Hair</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300/FFD700/FFFFFF?text=Nail+Art" alt="Nail Art">
-                <div class="gallery-overlay">
-                    <div class="gallery-info">
-                        <h4>Creative Nail Art</h4>
-                        <p>Gel Extension Design</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300/FFB6C1/FFFFFF?text=Skin+Glow" alt="Skin Treatment">
-                <div class="gallery-overlay">
-                    <div class="gallery-info">
-                        <h4>Glowing Skin</h4>
-                        <p>Hydra Facial Results</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300/E6E6FA/FFFFFF?text=Party+Makeup" alt="Party Makeup">
-                <div class="gallery-overlay">
-                    <div class="gallery-info">
-                        <h4>Party Ready</h4>
-                        <p>Glamorous Evening Look</p>
-                    </div>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://via.placeholder.com/400x300/FFD700/FFFFFF?text=Hair+Styling" alt="Hair Styling">
-                <div class="gallery-overlay">
-                    <div class="gallery-info">
-                        <h4>Elegant Updo</h4>
-                        <p>Bridal Hair Styling</p>
-                    </div>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
+                alt="Hair Transformation">
+            <div class="gallery-overlay">
+                <div class="gallery-info">
+                    <h4>Stunning Hair Color</h4>
+                    <p>Balayage Transformation</p>
                 </div>
             </div>
         </div>
-        
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
+                alt="Bridal Look">
+            <div class="gallery-overlay">
+                <div class="gallery-info">
+                    <h4>Bridal Elegance</h4>
+                    <p>HD Makeup & Hair</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
+                alt="Nail Art">
+            <div class="gallery-overlay">
+                <div class="gallery-info">
+                    <h4>Creative Nail Art</h4>
+                    <p>Gel Extension Design</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
+                alt="Skin Treatment">
+            <div class="gallery-overlay">
+                <div class="gallery-info">
+                    <h4>Glowing Skin</h4>
+                    <p>Hydra Facial Results</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
+                alt="Party Makeup">
+            <div class="gallery-overlay">
+                <div class="gallery-info">
+                    <h4>Party Ready</h4>
+                    <p>Glamorous Evening Look</p>
+                </div>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=300&q=80"
+                alt="Hair Styling">
+            <div class="gallery-overlay">
+                <div class="gallery-info">
+                    <h4>Elegant Updo</h4>
+                    <p>Bridal Hair Styling</p>
+                </div>
+            </div>
+        </div>
+    </div>
         <!-- Before/After Section -->
         <div class="section-header" style="margin-top: 60px;">
             <h3>Before & After</h3>
         </div>
         <div class="before-after">
-            <img src="https://via.placeholder.com/600x400/CCCCCC/666666?text=Before" alt="Before" class="before-image">
-            <img src="https://via.placeholder.com/600x400/FFB6C1/FFFFFF?text=After" alt="After" class="after-image">
+            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80"
+                alt="Before Skin Treatment" class="before-image">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=400&q=80"
+                alt="After Skin Treatment" class="after-image">
             <div class="slider-handle"></div>
         </div>
     </section>
@@ -2391,11 +2488,12 @@
         <div class="testimonial-carousel">
             <div class="testimonial-slide active">
                 <div class="testimonial-video">
-                    <img src="https://via.placeholder.com/200x200/FFB6C1/FFFFFF?text=Client+1" alt="Client">
+                    <img src="Image/How To Do Scalp Massage For Hair Growth And How Does It Work_.jpg" alt="Client">
                     <div class="play-btn"><i class="fas fa-play"></i></div>
                 </div>
                 <div class="testimonial-content">
-                    "Glow Studio transformed my wedding day! The team was professional, and my makeup lasted all day. I felt like a princess!"
+                    "Glow Studio transformed my wedding day! The team was professional, and my makeup lasted all day. I
+                    felt like a princess!"
                 </div>
                 <div class="testimonial-rating">★★★★★</div>
                 <div class="testimonial-author">Neha Patel</div>
@@ -2403,11 +2501,12 @@
             </div>
             <div class="testimonial-slide">
                 <div class="testimonial-video">
-                    <img src="https://via.placeholder.com/200x200/E6E6FA/FFFFFF?text=Client+2" alt="Client">
+                    <img src="Image/How To Do Scalp Massage For Hair Growth And How Does It Work_.jpg" alt="Client">
                     <div class="play-btn"><i class="fas fa-play"></i></div>
                 </div>
                 <div class="testimonial-content">
-                    "Best salon experience ever! The hair spa treatment was incredibly relaxing, and my hair has never looked better."
+                    "Best salon experience ever! The hair spa treatment was incredibly relaxing, and my hair has never
+                    looked better."
                 </div>
                 <div class="testimonial-rating">★★★★★</div>
                 <div class="testimonial-author">Riya Mehta</div>
@@ -2415,11 +2514,12 @@
             </div>
             <div class="testimonial-slide">
                 <div class="testimonial-video">
-                    <img src="https://via.placeholder.com/200x200/FFD700/FFFFFF?text=Client+3" alt="Client">
+                    <img src="Image/How To Do Scalp Massage For Hair Growth And How Does It Work_.jpg" alt="Client">
                     <div class="play-btn"><i class="fas fa-play"></i></div>
                 </div>
                 <div class="testimonial-content">
-                    "The monthly package is amazing value! I love coming here for my regular facials. My skin has improved dramatically."
+                    "The monthly package is amazing value! I love coming here for my regular facials. My skin has
+                    improved dramatically."
                 </div>
                 <div class="testimonial-rating">★★★★★</div>
                 <div class="testimonial-author">Anjali Verma</div>
@@ -2453,7 +2553,7 @@
                     <p>Confirm Details</p>
                 </div>
             </div>
-            
+
             <form class="booking-form">
                 <!-- Step 1: Service Selection -->
                 <div class="form-step" id="step1">
@@ -2548,34 +2648,38 @@
         <div class="blog-grid">
             <div class="blog-card">
                 <div class="blog-image">
-                    <img src="https://via.placeholder.com/400x250/FFB6C1/FFFFFF?text=Summer+Skin" alt="Summer Skin Care">
+                    <img src="Image/88afabab-2392-4f00-ab24-7ee628b29070.jpg"
+                        alt="Summer Skin Care">
                 </div>
                 <div class="blog-content">
                     <p class="blog-date">March 15, 2024</p>
                     <h3 class="blog-title">Summer Skin Care Tips</h3>
-                    <p class="blog-excerpt">Discover the essential skincare routine to keep your skin glowing and protected during the hot summer months...</p>
+                    <p class="blog-excerpt">Discover the essential skincare routine to keep your skin glowing and
+                        protected during the hot summer months...</p>
                     <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="blog-card">
                 <div class="blog-image">
-                    <img src="https://via.placeholder.com/400x250/E6E6FA/FFFFFF?text=Hair+Trends" alt="Hair Trends">
+                    <img src="Image/2011 NAHA Finalists - Salon Design copy.jpg" alt="Hair Trends">
                 </div>
                 <div class="blog-content">
                     <p class="blog-date">March 10, 2024</p>
                     <h3 class="blog-title">Trending Hair Colors 2024</h3>
-                    <p class="blog-excerpt">From pastel hues to bold statements, explore the hottest hair color trends that are dominating 2024...</p>
+                    <p class="blog-excerpt">From pastel hues to bold statements, explore the hottest hair color trends
+                        that are dominating 2024...</p>
                     <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="blog-card">
                 <div class="blog-image">
-                    <img src="https://via.placeholder.com/400x250/FFD700/FFFFFF?text=Bridal+Beauty" alt="Bridal Beauty">
+                    <img src="Image/Liana (liana95080249) - Profile _ Pinterest.jpg" alt="Bridal Beauty">
                 </div>
                 <div class="blog-content">
                     <p class="blog-date">March 5, 2024</p>
                     <h3 class="blog-title">Bridal Beauty Timeline</h3>
-                    <p class="blog-excerpt">Plan your pre-wedding beauty treatments with our comprehensive timeline for brides-to-be...</p>
+                    <p class="blog-excerpt">Plan your pre-wedding beauty treatments with our comprehensive timeline for
+                        brides-to-be...</p>
                     <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
@@ -2587,7 +2691,8 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>Glow Studio</h3>
-                <p>Your premier destination for luxury beauty treatments. Experience the difference with our expert team and premium services.</p>
+                <p>Your premier destination for luxury beauty treatments. Experience the difference with our expert team
+                    and premium services.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -2619,13 +2724,15 @@
                 <h3>Newsletter</h3>
                 <p>Subscribe for exclusive offers and beauty tips!</p>
                 <form>
-                    <input type="email" placeholder="Your email" style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none;">
+                    <input type="email" placeholder="Your email"
+                        style="width: 100%; padding: 10px; margin: 10px 0; border-radius: 5px; border: none;">
                     <button type="submit" class="btn-primary" style="width: 100%;">Subscribe</button>
                 </form>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Glow Studio. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p>&copy; 2024 Glow Studio. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of
+                    Service</a></p>
         </div>
     </footer>
 
@@ -2646,7 +2753,7 @@
         <p>Get 20% OFF on your first visit</p>
         <div class="offer-code">GLOW20</div>
         <p>Use this code when booking</p>
-        <button        <button class="btn-primary" onclick="copyCode()">Copy Code</button>
+        <button  class="btn-primary" onclick="copyCode()">Copy Code</button>
     </div>
 
 
@@ -2662,7 +2769,7 @@
         // Navbar scroll effect
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('.navbar');
-            if (window.scrollY >             100) {
+            if (window.scrollY > 100) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
@@ -2680,7 +2787,7 @@
         // // Mobile Menu Toggle
         // const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
         // const mobileMenu = document.querySelector('.mobile-menu');
-        
+
         // mobileMenuToggle.addEventListener('click', () => {
         //     mobileMenu.classList.toggle('active');
         //     mobileMenuToggle.classList.toggle('active');
@@ -2693,247 +2800,247 @@
         //         mobileMenuToggle.classList.remove('active');
         //     });
         // });
-        
-        
-        
+
+
+
         // Responsive Navbar JavaScript
-document.addEventListener('DOMContentLoaded', function() {
-    // Get elements
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav-menu a');
-    const navbar = document.querySelector('.navbar');
-    
-    // Create mobile menu overlay if it doesn't exist
-    if (!mobileMenuOverlay) {
-        const overlay = document.createElement('div');
-        overlay.className = 'mobile-menu-overlay';
-        document.body.appendChild(overlay);
-    }
-    
-    // Toggle mobile menu
-    function toggleMobileMenu() {
-        mobileMenuToggle.classList.toggle('active');
-        mobileMenu.classList.toggle('active');
-        document.querySelector('.mobile-menu-overlay').classList.toggle('active');
-        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    }
-    
-    // Event listeners
-    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-    
-    // Close menu when overlay is clicked
-    document.querySelector('.mobile-menu-overlay').addEventListener('click', toggleMobileMenu);
-    
-    // Close menu when a link is clicked
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenuToggle.classList.remove('active');
-            mobileMenu.classList.remove('active');
-            document.querySelector('.mobile-menu-overlay').classList.remove('active');
-            document.body.style.overflow = '';
-        });
-    });
-    
-    // Handle navbar scroll effect
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        // Add scrolled class
-        if (currentScroll > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-        
-        // Hide/show navbar on scroll (optional)
-        if (currentScroll > lastScroll && currentScroll > 100) {
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            navbar.style.transform = 'translateY(0)';
-        }
-        
-        lastScroll = currentScroll;
-    });
-    
-    // Prevent scroll when mobile menu is open
-    function preventScroll(e) {
-        if (mobileMenu.classList.contains('active')) {
-            e.preventDefault();
-        }
-    }
-    
-    // Handle resize events
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
-                mobileMenuToggle.classList.remove('active');
-                mobileMenu.classList.remove('active');
-                document.querySelector('.mobile-menu-overlay').classList.remove('active');
-                document.body.style.overflow = '';
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get elements
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-menu a');
+            const navbar = document.querySelector('.navbar');
+
+            // Create mobile menu overlay if it doesn't exist
+            if (!mobileMenuOverlay) {
+                const overlay = document.createElement('div');
+                overlay.className = 'mobile-menu-overlay';
+                document.body.appendChild(overlay);
             }
-        }, 250);
-    });
-    
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const navbarHeight = navbar.offsetHeight;
-                const targetPosition = target.offsetTop - navbarHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
+
+            // Toggle mobile menu
+            function toggleMobileMenu() {
+                mobileMenuToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.querySelector('.mobile-menu-overlay').classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            }
+
+            // Event listeners
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+
+            // Close menu when overlay is clicked
+            document.querySelector('.mobile-menu-overlay').addEventListener('click', toggleMobileMenu);
+
+            // Close menu when a link is clicked
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuToggle.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.querySelector('.mobile-menu-overlay').classList.remove('active');
+                    document.body.style.overflow = '';
                 });
+            });
+
+            // Handle navbar scroll effect
+            let lastScroll = 0;
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+
+                // Add scrolled class
+                if (currentScroll > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+
+                // Hide/show navbar on scroll (optional)
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    navbar.style.transform = 'translateY(0)';
+                }
+
+                lastScroll = currentScroll;
+            });
+
+            // Prevent scroll when mobile menu is open
+            function preventScroll(e) {
+                if (mobileMenu.classList.contains('active')) {
+                    e.preventDefault();
+                }
             }
+
+            // Handle resize events
+            let resizeTimer;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(() => {
+                    if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+                        mobileMenuToggle.classList.remove('active');
+                        mobileMenu.classList.remove('active');
+                        document.querySelector('.mobile-menu-overlay').classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                }, 250);
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        const navbarHeight = navbar.offsetHeight;
+                        const targetPosition = target.offsetTop - navbarHeight;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
         });
-    });
-});
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         // Services Data
-        const services = {
-            hair: [
-                {
-                    name: "Hair Spa",
-                    price: "₹899",
-                    duration: "60 min",
-                    image: "https://via.placeholder.com/300x200/FFB6C1/FFFFFF?text=Hair+Spa",
-                    trending: true
-                },
-                {
-                    name: "Hair Color",
-                    price: "₹1499+",
-                    duration: "90 min",
-                    image: "https://via.placeholder.com/300x200/E6E6FA/FFFFFF?text=Hair+Color"
-                },
-                {
-                    name: "Keratin Treatment",
-                    price: "₹3999",
-                    duration: "180 min",
-                    image: "https://via.placeholder.com/300x200/FFD700/FFFFFF?text=Keratin"
-                },
-                {
-                    name: "Bridal Hair",
-                    price: "₹4999",
-                    duration: "120 min",
-                    image: "https://via.placeholder.com/300x200/FFB6C1/FFFFFF?text=Bridal+Hair",
-                    trending: true
-                }
-            ],
-            skin: [
-                {
-                    name: "Luxury Facial",
-                    price: "₹799+",
-                    duration: "60 min",
-                    image: "https://via.placeholder.com/300x200/E6E6FA/FFFFFF?text=Facial"
-                },
-                {
-                    name: "Deep Cleanup",
-                    price: "₹499",
-                    duration: "45 min",
-                    image: "https://via.placeholder.com/300x200/FFB6C1/FFFFFF?text=Cleanup"
-                },
-                {
-                    name: "Anti-aging Treatment",
-                    price: "₹2999",
-                    duration: "90 min",
-                    image: "https://via.placeholder.com/300x200/FFD700/FFFFFF?text=Anti-aging",
-                    trending: true
-                },
-                {
-                    name: "Hydra Facial",
-                    price: "₹3499",
-                    duration: "75 min",
-                    image: "https://via.placeholder.com/300x200/E6E6FA/FFFFFF?text=Hydra+Facial"
-                }
-            ],
-            makeup: [
-                {
-                    name: "Party Makeup",
-                    price: "₹1999",
-                    duration: "60 min",
-                    image: "https://via.placeholder.com/300x200/FFB6C1/FFFFFF?text=Party+Makeup"
-                },
-                {
-                    name: "Bridal Makeup",
-                    price: "₹9999",
-                    duration: "120 min",
-                    image: "https://via.placeholder.com/300x200/FFD700/FFFFFF?text=Bridal+Makeup",
-                    trending: true
-                },
-                {
-                    name: "HD Makeup",
-                    price: "₹3999",
-                    duration: "90 min",
-                    image: "https://via.placeholder.com/300x200/E6E6FA/FFFFFF?text=HD+Makeup"
-                },
-                {
-                    name: "Nude Look",
-                    price: "₹1499",
-                    duration: "45 min",
-                    image: "https://via.placeholder.com/300x200/FFB6C1/FFFFFF?text=Nude+Look"
-                }
-            ],
-            nails: [
-                {
-                    name: "Manicure",
-                    price: "₹499",
-                    duration: "45 min",
-                    image: "https://via.placeholder.com/300x200/E6E6FA/FFFFFF?text=Manicure"
-                },
-                {
-                    name: "Pedicure",
-                    price: "₹599",
-                    duration: "60 min",
-                    image: "https://via.placeholder.com/300x200/FFB6C1/FFFFFF?text=Pedicure"
-                },
-                {
-                    name: "Gel Extension",
-                    price: "₹1999",
-                    duration: "90 min",
-                    image: "https://via.placeholder.com/300x200/FFD700/FFFFFF?text=Gel+Extension",
-                    trending: true
-                },
-                {
-                    name: "Nail Art Design",
-                    price: "₹299+",
-                    duration: "30 min",
-                    image: "https://via.placeholder.com/300x200/E6E6FA/FFFFFF?text=Nail+Art"
-                }
-            ]
-        };
+    const services = {
+        hair: [
+            {
+                name: "Hair Spa",
+                price: "₹899",
+                duration: "60 min",
+                image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+                trending: true
+            },
+            {
+                name: "Hair Color",
+                price: "₹1499+",
+                duration: "90 min",
+                image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                name: "Keratin Treatment",
+                price: "₹3999",
+                duration: "180 min",
+                image: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                name: "Bridal Hair",
+                price: "₹4999",
+                duration: "120 min",
+                image: "https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+                trending: true
+            }
+        ],
+        skin: [
+            {
+                name: "Luxury Facial",
+                price: "₹799+",
+                duration: "60 min",
+                image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                name: "Deep Cleanup",
+                price: "₹499",
+                duration: "45 min",
+                image: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                name: "Anti-aging Treatment",
+                price: "₹2999",
+                duration: "90 min",
+                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+                trending: true
+            },
+            {
+                name: "Hydra Facial",
+                price: "₹3499",
+                duration: "75 min",
+                image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+            }
+        ],
+        makeup: [
+            {
+                name: "Party Makeup",
+                price: "₹1999",
+                duration: "60 min",
+                image: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                name: "Bridal Makeup",
+                price: "₹9999",
+                duration: "120 min",
+                image: "https://images.unsplash.com/photo-1457972729786-0411a3b2b626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+                trending: true
+            },
+            {
+                name: "HD Makeup",
+                price: "₹3999",
+                duration: "90 min",
+                image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                name: "Nude Look",
+                price: "₹1499",
+                duration: "45 min",
+                image: "https://images.unsplash.com/photo-1498387727476-b0b0ee85e0a9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+            }
+        ],
+        nails: [
+            {
+                name: "Manicure",
+                price: "₹499",
+                duration: "45 min",
+                image: "https://images.unsplash.com/photo-1604654894610-df63bc536371?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                name: "Pedicure",
+                price: "₹599",
+                duration: "60 min",
+                image: "https://images.unsplash.com/photo-1519014816548-bf5fe059798b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+            },
+            {
+                name: "Gel Extension",
+                price: "₹1999",
+                duration: "90 min",
+                image: "https://images.unsplash.com/photo-1610992015732-2449b76344bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80",
+                trending: true
+            },
+            {
+                name: "Nail Art Design",
+                price: "₹299+",
+                duration: "30 min",
+                image: "https://images.unsplash.com/photo-1632345031435-8727f6897d53?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80"
+            }
+        ]
+    };
 
         // Render Services
         function renderServices(category = 'hair') {
             const serviceGrid = document.getElementById('serviceGrid');
             serviceGrid.innerHTML = '';
-            
+
             services[category].forEach(service => {
                 const serviceCard = document.createElement('div');
                 serviceCard.className = 'service-card';
@@ -2970,7 +3077,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Slideshow
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
-        
+
         function showSlide(n) {
             slides[currentSlide].classList.remove('active');
             currentSlide = (n + slides.length) % slides.length;
@@ -2994,7 +3101,7 @@ document.addEventListener('DOMContentLoaded', function() {
             sparkle.style.left = x + 'px';
             sparkle.style.top = y + 'px';
             document.body.appendChild(sparkle);
-            
+
             setTimeout(() => {
                 sparkle.remove();
             }, 1000);
@@ -3051,7 +3158,7 @@ document.addEventListener('DOMContentLoaded', function() {
             for (let i = 0; i < 50; i++) {
                 createConfetti();
             }
-            
+
             // Show success message
             alert('Booking Confirmed! We will send you a WhatsApp confirmation shortly.');
         }
@@ -3067,7 +3174,7 @@ document.addEventListener('DOMContentLoaded', function() {
             confetti.style.borderRadius = '50%';
             confetti.style.zIndex = '9999';
             document.body.appendChild(confetti);
-            
+
             const animation = confetti.animate([
                 { transform: 'translateY(0) rotate(0deg)', opacity: 1 },
                 { transform: `translateY(${window.innerHeight}px) rotate(${Math.random() * 360}deg)`, opacity: 0 }
@@ -3075,7 +3182,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 duration: 3000,
                 easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
             });
-            
+
             animation.onfinish = () => confetti.remove();
         }
 
@@ -3099,12 +3206,12 @@ document.addEventListener('DOMContentLoaded', function() {
             document.addEventListener('mouseup', () => isSliding = false);
             document.addEventListener('mousemove', (e) => {
                 if (!isSliding) return;
-                
+
                 const slider = sliderHandle.parentElement;
                 const rect = slider.getBoundingClientRect();
                 const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
                 const percentage = (x / rect.width) * 100;
-                
+
                 sliderHandle.style.left = percentage + '%';
                 afterImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
             });
@@ -3137,7 +3244,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Testimonial Carousel
         let currentTestimonial = 0;
         const testimonialSlides = document.querySelectorAll('.testimonial-slide');
-        
+
         function showTestimonial(n) {
             if (testimonialSlides.length > 0) {
                 testimonialSlides[currentTestimonial].classList.remove('active');
@@ -3154,7 +3261,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const parallaxElements = document.querySelectorAll('.parallax');
-            
+
             parallaxElements.forEach(element => {
                 const speed = element.dataset.speed || 0.5;
                 element.style.transform = `translateY(${scrolled * speed}px)`;
@@ -3185,8 +3292,8 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 
     <!-- Remaining HTML sections -->
-    
-   
+
+
     <!-- Additional JavaScript -->
     <script>
         // Copy offer code to clipboard
@@ -3216,7 +3323,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.form-step').forEach(s => s.style.display = 'none');
             // Show current step
             document.getElementById(`step${step}`).style.display = 'block';
-            
+
             // Update step indicators
             document.querySelectorAll('.step').forEach((s, index) => {
                 if (index + 1 <= step) {
@@ -3359,7 +3466,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Track important user actions
         document.querySelectorAll('.book-service-btn, .book-expert-btn, .btn-primary').forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 trackEvent('Engagement', 'Click', this.textContent);
             });
         });
@@ -3395,12 +3502,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Initialize all components
             renderServices();
             updateSlotAvailability();
-            
+
             // Show a welcome animation
             setTimeout(() => {
                 document.body.style.opacity = '1';
             }, 100);
-            
+
             // Log successful load
             console.log('Glow Studio website loaded successfully!');
         });
@@ -3433,23 +3540,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <!-- Custom CSS for print media -->
     <style media="print">
-        .navbar, .footer, .floating-whatsapp, .scroll-top, .offer-popup, .popup-overlay {
+        .navbar,
+        .footer,
+        .floating-whatsapp,
+        .scroll-top,
+        .offer-popup,
+        .popup-overlay {
             display: none !important;
         }
-        
+
         .hero {
             height: auto;
             padding: 50px 20px;
         }
-        
+
         .hero-video {
             display: none;
         }
-        
+
         body {
             font-size: 12pt;
             line-height: 1.5;
         }
     </style>
 </body>
+
 </html>
